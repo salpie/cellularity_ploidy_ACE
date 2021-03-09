@@ -3,7 +3,7 @@
 x<-c("QDNAseq", "methods", "dplyr", "stringr", "CGHcall", "ACE", "copynumber", "zoo", "ggplot2", "tidyverse", "MALDIquant")
 lapply(x, require, character.only = TRUE)
 
-# functions
+# functions to calculate the cellularity
 
 peaky <- function(x, y, w=1, ...) {
   n <- length(y)
