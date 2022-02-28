@@ -67,6 +67,7 @@ calculateCellPloid <- function(copynumber_df,w,span,lowest) {
         }
 
 		# scale cellularity 
+#		samples$cellularity <- sapply(samples$cellularity, function(i) (((i - min(samples$cellularity)) * (0.8 - 0.1)) / 	(max(samples$cellularity) - min(samples$cellularity))))
 		samples$cellularity <- sapply(samples$cellularity, function(i) (((i - min(samples$cellularity)) * (0.8 - 0.1)) / 	(max(samples$cellularity) - min(samples$cellularity))) + 0.3)
 		samples$cellularity[samples$cellularity==0.3] <- 0
 
